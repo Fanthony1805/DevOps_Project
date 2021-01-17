@@ -1,0 +1,17 @@
+version: '3'
+services:
+  redis:
+    image: "redis"
+  web:
+    # COMPLETE HERE
+    build: .
+    ports:
+      - "5000:8080"
+    restart: always
+    environment:
+      # ...
+      REDIS_redis_HOST: redis:6379
+      REDIS_redis_USER: redis
+      REDIS_redis_PASSWORD: redis
+      REDIS_redis_NAME: redis
+    
