@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '12'
+- '14'
+services:
+- redis-server
+script:
+- echo 'Starting'
+- npm install
+- echo 'Testing'
+- npm test
+
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: "904e49fb-3285-4023-8a5c-751e9390a6ca"
+#app: ece-devops-project
+#  on:
+#    repo: Fanthony1805/ece-devops-project
+
